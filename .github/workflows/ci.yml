@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo $SSHKEY
-        env:
-          SSHKEY: ${{ secrets.SSHKEY }}
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
